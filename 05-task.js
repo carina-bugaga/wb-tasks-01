@@ -60,7 +60,6 @@ class LinkedList {
 
 /**
  * Преобразование JSON в связный список.
-
  * @param {String} json JSON строка (массив объектов)
  * @returns Односвязный список
  */
