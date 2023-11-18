@@ -4,14 +4,12 @@
 //Односвязный список - структура данных, в которой несколько значений хранятся линейно;
 //каждое значение сохраняет ссылку на следующий узел.
 
-const arrayJSON = [
-  { name: 'Tony', year: 1965 },
-  { name: 'Loki', year: 1981 },
-  { name: 'Tor', year: 1983 },
-  { name: 'Halk', year: 1967 },
+const json = [
+  {"name":"Tony","year":1965},
+  {"name":"Loki","year":1981},
+  {"name":"Tor","year":1983},
+  {"name":"Halk","year":1967}
 ];
-//Преобразуем объект в JSON
-const stringJSON = JSON.stringify(arrayJSON);
 
 //Класс узла односвязного списка
 class LinkedListNode {
@@ -60,20 +58,18 @@ class LinkedList {
 
 /**
  * Преобразование JSON в связный список.
- * @param {String} json JSON строка (массив объектов)
+ * @param {String} json JSON строка
  * @returns Односвязный список
  */
 function transformJSONtoLinkedList(json) {
   //Создаем новый список
   const linkedList = new LinkedList();
-  //Преобразуем JSON строку в объект
-  const jsonList = JSON.parse(json);
   //Проверка что массив не пустой
-  if (jsonList.length == 0) return;
+  if (json.length == 0) return;
   //Перебираем массив и добавляем каждый элемент в список
-  jsonList.forEach(el => linkedList.appendNode(el));
+  json.forEach(el => linkedList.appendNode(el));
   //Возвращаем голову списка
   return linkedList.getHeadList();
 }
 
-console.log(transformJSONtoLinkedList(stringJSON));
+console.log(transformJSONtoLinkedList(json));
