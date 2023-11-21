@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geocoding</title>
+  <style>
+    body {
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(60,9,121,1) 35%, rgba(0,255,209,1) 100%);
+      color: black;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 18px;
+      padding: 0 20px;
+    }
+    .wrapper {
+      max-width: 800px;
+      margin: 150px auto;
+    }
+    .wrapper .address-input {
+      background-color: white;
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+    }
+    .address-input.active .select-box {
+      padding: 10px 8px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .address-input.active .select-box li{
+      display: block;
+    }
+    .address-input input {
+      height: 55px;
+      width: 770px;
+      outline: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      border-radius: 6px;
+      padding: 0 15px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1)
+    }
+    .address-input input:focus {
+      border-color: rgb(255, 171, 171);
+      outline: none;
+    }
+    .address-input .select-box {
+      padding: 0;
+      max-height: 480px;
+      overflow-y: auto;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .select-box li {
+      list-style: none;
+      padding: 8px;
+      width: 768px;
+      cursor: default;
+      border-radius: 3px;
+      display: none;
+    }
+    .select-box li:hover {
+      background: #efefef;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="address-input">
+      <input type="text" id="input-address" placeholder="Введите адрес...">
+      <div class="select-box" id="select-box">
+      </div>
+    </div>
+  </div>
+  <script src="./17-task.js"></script>
+</body>
+</html>
