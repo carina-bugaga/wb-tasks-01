@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document.write()</title>
+  <style>
+    body {
+      background: linear-gradient(60deg, rgb(76, 172, 148) 0%, rgb(136, 77, 176) 100%);
+      color: black;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 22px;
+      margin: 0 auto;
+      min-height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <span>Start&nbsp;</span>
+  <script>
+    /* Посчитайте сколько раз можно вызвать функцию document.write() внутри document.write(). 
+    Объясните результат. */
+    
+    //Счетчик вызовов функции
+    let i = 0
+    const funcDocWrite = () => {
+      i++;
+      //Выводим значение cчетчика
+      document.write('<span>' + i + '&nbsp;' + '</span>');
+      //Рекурсивно вызываем функцию и создаем элемент
+      document.write('<script>funcDocWrite();<\/script>')
+    }
+
+    funcDocWrite();
+
+    /* Функцию document.write() можно вызвать 21 раз.
+       Это ограничение связано с размером буфера вывода. 
+       Функция используется для динамического создания содержимого страницы во время загрузки.
+       Поэтому после загрузки страницы, содержимое буфера вывода отображается на ней. 
+       Но если буфер будет превышен, браузер автоматически выполнет вывод содержимого буфера и очистит его.
+    */
+  </script>
+</body>
+</html>
