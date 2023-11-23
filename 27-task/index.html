@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style DOM-element</title>
+  <style>
+    body {
+      background: linear-gradient(120deg, #040d15, #133655);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .button {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(90deg, #0162c8, #55e7fc);
+      font-size: 24px;
+      color: white;
+      width: 250px;
+      height: 70px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    button:nth-child(2) {
+      background: linear-gradient(90deg, #755bea, #ff72c0);
+      margin-top: 30px;
+    }
+    span {
+      position: absolute;
+      background: white;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      border-radius: 50%;
+      animation: animate 1s linear infinite;
+    }
+    @keyframes animate
+    { 
+      0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+      }
+      100% {
+        width: 500px;
+        height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="button">Click me</button>
+  <button class="button">Click me</button>
+  <script src="./27-task.js"></script>
+</body>
+</html>
