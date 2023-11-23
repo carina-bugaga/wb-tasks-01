@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password analyzer</title>
+  <style>
+    body {
+      background: linear-gradient(150deg, rgb(76, 82, 172) 0%, rgb(143, 113, 163) 100%);
+      color: black;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 24px;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+    .password-input {
+      padding-top: 300px;
+    }
+    #input {
+      height: 55px;
+      width: 650px;
+      padding: 0 15px;
+      outline: none;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 300;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+    .message {
+      padding: 15px 0 0 15px;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    .improvement {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="password-input">
+    <input type="text" id="input" placeholder="Введите пароль...">
+    <div class="message" id="grade-message"></div>
+    <div class="message improvement" id="improvement-message"></div>
+  </div>
+  <script src="./23-task.js"></script>
+</body>
+</html>
