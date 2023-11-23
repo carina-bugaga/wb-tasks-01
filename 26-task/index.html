@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursion DOM tree</title>
+  <style>
+    body {
+      background: linear-gradient(30deg, rgb(214, 217, 132) 0%, rgb(149, 113, 163) 100%);
+      color: rgb(75, 0, 75);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+    #parent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #children-1, #children-2, #children-3 {
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="parent">
+    <h1>Parent 1</h1>
+    <ul id="parent-box-1">
+      <li>
+        <h2>Children 1</h2>
+      </li>
+      <ul id="children-1">
+        <li>Child 1</li>
+        <li>Child 2</li>
+        <li>Child 3</li>
+      </ul>
+    </ul>
+
+    <h1>Parent 2</h1>
+    <ul id="parent-box-2">
+      <li>
+        <h2>Children 2</h2>
+      </li>
+      <ul id="children-2">
+        <li>Child 1</li>
+        <li>Child 2</li>
+        <li>
+          <h3>Children 3</h3>
+        </li>
+        <ul id="children-3">
+          <li>Child 1</li>
+          <li>Child 2</li>
+        </ul>
+      </ul>
+    </ul>
+  </div>
+  <script src="./26-task.js"></script>
+</body>
+</html>
