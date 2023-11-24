@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template</title>
+  <style>
+    body {
+      background: linear-gradient(130deg, rgb(15, 63, 78), #471e79);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+    .button {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(90deg, #0162c8, #55e7fc);
+      font-size: 24px;
+      color: white;
+      width: 200px;
+      height: 50px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Список покупок</h1>
+  <button class="button">Click me</button>
+  <ul class="products-list"></ul>
+
+  <template id="template">
+    <li>New list item</li>
+  </template>
+
+  <script src="./28-task.js"></script>
+</body>
+</html>
