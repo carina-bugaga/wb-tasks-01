@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the number</title>
+  <style>
+    body {
+      background: black;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 18px;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      width: 630px;
+      margin: auto;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    label + label {
+      margin-top: 25px;
+    }
+    span {
+      margin-right: 35px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1;
+    }
+    input {
+      color: white;
+      background-color: transparent;
+      padding: 10px 15px;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 300;
+      border: 1px solid white;
+      border-radius: 6px;
+      width: 300px;
+    }
+    button {
+      display: block;
+      border: none;
+      border-radius: 6px;
+      min-width: 334px;
+      padding: 8px 15px;
+      margin-top: 15px;
+      margin-left: auto;
+      color: black;
+      font-size: 18px;
+      font-weight: 300;
+      font-family: inherit;
+      background: linear-gradient(45deg, #5b7cea, #ff72c0);
+    }
+    button:hover {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <h1>Угадай число от 1 до 10</h1>
+    <label>
+      <span >Ваше имя:</span>
+      <input type="text" id="name" required>
+    </label>
+    <label>
+      <span >Ваш email:</span>
+      <input type="email" id="email" required>
+    </label>
+    <label>
+      <span >Ваше число:</span>
+      <input type="text" id="number" maxlength="2" required>
+    </label>
+    <button id="button" type="submit">Отправить</button>
+  </form>
+  <script src="./29-task.js"></script>
+</body>
+</html>
