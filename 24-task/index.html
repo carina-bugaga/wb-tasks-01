@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style DOM-element</title>
+  <style>
+    body {
+      background: linear-gradient(150deg, #e6e8ff, #ff7792);
+      font: 400 16px'Segoe UI';
+      margin: 0;
+      min-height: 100vh;
+    }
+    #box {
+      padding-top: 50px;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .table {
+      width: 80%;
+      background: #fafafa;
+      text-align: center;
+      border-collapse: collapse;
+      border-spacing: 0;
+      border-radius: 6px 6px 0 0;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    .table-head {
+      color: white;
+      background: #ff4785;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    th, td {
+      padding: 10px 15px;
+    }
+    td {
+      color: black;
+      font-weight: 400;
+    }
+    tr:nth-child(even) {
+      background-color: #eeeeee;
+    }
+    .pagination-box {
+      padding: 10px;
+      margin: 30px;
+      width: 500px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    button {
+      background: #ff4785;
+      font-size: 18px;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .active {
+      background: #ffa6c4;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <table class="table" >
+      <thead class="table-head">
+        <th data-column="fname" data-order="desc">fname ▲</th>
+        <th data-column="lname" data-order="desc">lname ▲</th>
+        <th data-column="tel" data-order="desc">tel ▲</th>
+        <th data-column="address" data-order="desc">address ▲</th>
+        <th data-column="city" data-order="desc">city ▲</th>
+        <th data-column="state" data-order="desc">state ▲</th>
+        <th data-column="zip" data-order="desc">zip ▲</th>
+      </thead>
+      <tbody id="tableJSON"></tbody>
+    </table>
+    <div id="pagination-wrapper" class="pagination-box"></div>
+  </div>
+  <script src="./24-task.js"></script>
+</body>
+</html>
