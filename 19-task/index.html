@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VK Wall</title>
+  <style>
+    body {
+      background: #7b84fc;
+      color: black;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      max-height: 100vh;
+    }
+    #wall {
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .post {
+      width: 40%;
+      height: max-content;
+      background-color: white;
+      padding: 15px;
+      margin: 15px;
+      border-radius: 10px;
+    }
+    .text {
+      margin: 0 0 15px 0;
+      font: 500 18px inherit;
+      -webkit-line-clamp: 3; 
+      display: -webkit-box; 
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .date {
+      font-size: 14px;
+      color: darkgrey;
+    }
+    .image-box {
+      padding-top: 15px;
+      display: flex;
+      justify-content: center;
+    }
+    .image {
+      width: 320px;
+      height: 320px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wall"></div>
+  <script src="./19-task.js"></script>
+</body>
+</html>
