@@ -17,7 +17,7 @@ try {
   //Удаляем элемент test из локального хранилища    
   localStorage.removeItem('test');
   //Получаем данные последней успешной итерации
-  localStorage.setItem('test', i - 50); 
+  localStorage.setItem('test', i - 100); 
 }
 
 sizeNumber.innerHTML = localStorage.getItem('test');
